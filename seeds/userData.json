@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Exequiel Francia",
+        "email": "franciaexequiel@hotmail.ca",
+        "password": "password12345"
+    },
+    {
+        "name": "admin",
+        "email": "admin@admin.ca",
+        "password": "admin"
+    }
+    
+]
