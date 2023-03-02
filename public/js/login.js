@@ -1,5 +1,6 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
+
   
     // Collect values from the login form
     const email = document.querySelector('#email-login').value.trim();
@@ -15,9 +16,9 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the profile page
-        document.location.replace('/category/recipe');
+        document.location.replace('/');
       } else {
-        alert(response.statusText);
+        alert('Falied to log in');
       }
     }
   };
@@ -52,3 +53,6 @@ const loginFormHandler = async (event) => {
     .querySelector('.signup-form')
     .addEventListener('submit', signupFormHandler);
   
+=======
+};
+
