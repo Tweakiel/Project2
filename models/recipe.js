@@ -18,19 +18,57 @@ Recipe.init(
     description: {
       type: DataTypes.STRING,
     },
+    //ingredients and instructions into arrays for listing later
+    ingredients: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      get() {
+        // Get the stringified array value from the database
+        const value = this.getDataValue("ingredients");
+        if (!value) {
+          //invalid value= empty array
+          return [];
+        }
+        return JSON.parse(value);
+      },
+      set(value) {
+        //convert the array into a string for storage in db
+        this.setDataValue("ingredients", JSON.stringify(value));
+      },
+    },
+    instructions: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      get() {
+        // Get the stringified array value from the database
+        const value = this.getDataValue("instructions");
+        if (!value) {
+          //invalid value= empty array
+          return [];
+        }
+        return JSON.parse(value);
+      },
+      set(value) {
+        //convert the array into a string for storage in db
+        this.setDataValue("instructions", JSON.stringify(value));
+      },
+    },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    needed_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user",
+        model: "User",
+        key: "id",
+      },
+    },
+    category_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "Category",
         key: "id",
       },
     },
