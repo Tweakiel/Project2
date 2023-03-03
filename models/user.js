@@ -3,10 +3,6 @@ const bcrypt = require("bcrypt");
 const sequelize = require("../config/connection");
 
 class User extends Model {
-  //used taken from activities, uses bcrypt to check if req.body will match with password from database
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
 }
 
 User.init(
