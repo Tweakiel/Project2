@@ -1,0 +1,45 @@
+[
+    {
+        "name": "Grilled Cheese Sandwich",
+        "description": "Learn how to make a grilled cheese sandwich in a nonstick pan with buttered bread and American Cheddar for a classic hot sandwich.",
+        "ingredients": ["4 Slices of white bread",
+         "3 tbs of butter (divided)", 
+         "slices of cheddar cheese"],
+         "instructions":[
+            "Cook bacon in a large, deep skillet over medium-high heat until evenly browned, about 10 minutes. Drain bacon on a paper towel-lined plate.", 
+            "Arrange cooked bacon, lettuce, and tomato slices on one slice of bread. Spread mayonnaise on the other slice of bread. Close to make a sandwich."],
+        "user_id":"1",
+        "category_id":"1"
+    },
+    
+    {
+        "name": "BLT",
+        "description": "This BLT is classic: bacon, lettuce, and tomato — nothing fancy, just delicious. (I use fake vegetarian bacon these days, and it's still really good!)",
+        "ingredients": [
+            "4 Slices of bacon ", 
+            "2 leaves lettuce", 
+            "2 slices of tomato", 
+            "2 slices of bread (toasted)", 
+            "mayonaise (1tb)"] ,
+        "instructions":[
+            "Cook bacon in a large, deep skillet over medium-high heat until evenly browned, about 10 minutes. Drain bacon on a paper towel-lined plate.", 
+            "Arrange cooked bacon, lettuce, and tomato slices on one slice of bread. Spread mayonnaise on the other slice of bread. Close to make a sandwich."],
+            "user_id":"1",
+            "category_id":"2"
+    },
+
+    {
+        "name": "baked chicken thighs",
+        "description": "These easy baked chicken thighs require minimum preparation; I love this quick recipe because I'm a college student! Feel free to season the chicken with your favorite spices. I like to use cayenne powder and black pepper.",
+        "ingredients": [
+            "4 Chicken thighs",
+         "4 teaspoons garlic powder", 
+         "4 teaspoons onion flakes"],
+         "instructions":[
+            "Preheat the oven to 375 degrees F (190 degrees C).", 
+            "Place chicken thighs in a baking dish; season both sides with garlic powder and onion flakes.",
+            "Bake in the preheated oven until no longer pink at the bone and juices run clear, about 30 minutes. An instant-read thermometer inserted into thickest part of thigh, near the bone, should read 165 degrees F (74 degrees C)."],
+            "user_id":"1",
+            "category_id":"3"
+    }
+]
