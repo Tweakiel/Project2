@@ -1,3 +1,20 @@
+   <main>
+        // make right-hero and left-hero be in flex-row
+        <div class="right-hero">
+            <img src="../public/images/hero.jpg" alt="Chef TasteTroop">
+        </div>
+
+        <div class="left-hero">
+            <h3>From TasteTroop to Tastebuds</h3>
+            <p>Browse our extensive collection of recipes, and discover new dishes to add to your repertoire. </p>
+
+            <a href="/" class="hero-button">Get Started</a>
+            {{#if logged_in}}
+                <a id="recipe-button" href="/recipes">Recipes</a> 
+                <button class="no-button" id="logout">Logout</button>
+            {{/if}}
+        </div>
+    </main>
 <!-- Loop over each object in the projects array -->
 {{#each recipes as |recipe| }}
  <div style="background-color: #eee;">
@@ -8,7 +25,7 @@
           <i class="fab fa-apple fa-lg pt-3 pb-1 px-3"></i>
           // we insert the image of the category through helpers
             <a href="/recipe/{{recipe.id}}">
-                <img src={{recipe_image}} class="card-img-top" alt="Recipe Image" />
+                <img src={{recipe.image}} class="card-img-top" alt="Recipe Image" />
             </a>
           <div class="card-body">
             <div class="text-center">

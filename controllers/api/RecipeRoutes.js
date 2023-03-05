@@ -6,21 +6,6 @@ const router = require("express").Router();
 console.log("RecipeRoutes file was called!");
 
 
-
-// Get a single recipe by id
-router.get("/:id", async (req, res) => {
-  try {
-    const recipe = await Recipe.findByPk(req.params.id);
-    if (!recipe) {
-      res.status(404).json({ message: "Recipe not found" });
-    } else {
-      res.status(200).json(recipe);
-    }
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 // Create a new recipe
 router.post("/", async (req, res) => {
   try {
