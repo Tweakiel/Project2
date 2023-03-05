@@ -13,48 +13,6 @@
 </head>
 
 <body>
-    <header>
-        <a href="/" class="logo">
-            TasteTroop
-        </a>
-
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="/category">Category</a>
-                </li>
-                    {{#if logged_in}}
-                    //make this recipe-button into the same ui as no-button class
-                        <a id="recipe-button" href="/category/recipe">Recipe</a> |
-                        <button class="no-button" id="logout">logout</button>
-                    {{else}}
-                    //make this login-button into the same ui as no-button class
-                        <a id="login-button" href="/login">Login</a>
-                    {{/if}}
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        // make right-hero and left-hero be in flex-row
-        <div class="right-hero">
-            <h3>From TasteTroop to Tastebuds</h3>
-            <p>Browse our extensive collection of recipes, and discover new dishes to add to your repertoire. </p>
-
-            <a href="/" class="hero-button">Get Started</a>
-            {{#if logged_in}}
-                <a id="recipe-button" href="/category">Recipe</a> |
-                <button class="no-button" id="logout">logout</button>
-            {{/if}}
-            <a href="/login" class="hero-button">Login</a>
-        </div>
-        <div class="left-hero">
-            <img src="../../public/images/hero.jpg" alt="Chef TasteTroop">
-        </div>
-    </main>
 
     <section>
         {{{ body }}}
