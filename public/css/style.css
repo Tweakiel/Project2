@@ -22,7 +22,7 @@ body{
   
   .logo img:hover {
       cursor: pointer;
-      content: url("images/recipe-book.gif");
+      content: url("/images/recipe-book-unscreen.gif");
       transition: ease-out .3s;
     }
   

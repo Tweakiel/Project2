@@ -2,7 +2,7 @@
         {{!-- // make right-hero and left-hero be in flex-row --}}
        <div class="container">
       <div class="row">
-        <img src="images/2004.i121.037_isometric_cooking_school_blog_set-01-removebg-preview.png" class="rounded float-start" id="chef" alt="Chef TasteTroop" >
+        <img src="/images/2004.i121.037_isometric_cooking_school_blog_set-01-removebg-preview.png"  class="rounded float-start" id="chef" alt="Chef TasteTroop" >
         <div class="col-md-6" id="content">
           <h3>From TasteTroop to Tastebuds</h3>
           <p>Browse our extensive collection of recipes, and discover new dishes to add to your repertoire. </p>
@@ -22,26 +22,26 @@
       <div class="col-md-8 col-lg-6 col-xl-4">
         <div class="card text-black">
           <i class="fab fa-apple fa-lg pt-3 pb-1 px-3"></i>
-          {{!-- // we insert the image of the category through helpers --}}
-            <a href="/recipe/{{recipe.id}}">
+          // we insert the image of the category through helpers
+            <a href="/recipes/{{recipe.id}}">
                 <img src={{recipe.image}} class="card-img-top" alt="Recipe Image" />
             </a>
           <div class="card-body">
             <div class="text-center">
               <h5>
-                <a href="/recipe/{{recipe.id}}">{{recipe.name}}</a>
+                <a href="/recipes/{{recipe.id}}">{{recipe.name}}</a>
               </h5>
-              <p class="text-muted mb-4">{{category.name}}</p>
+              <p class="text-muted mb-4">{{Category.name}}</p>
             </div>
             <div>
               <div class="d-flex justify-content-between">
-                <span>Recipe owner</span><span class="text-secondary">{{user.name}}</span>
+                <span>Recipe owner: </span><span class="text-secondary">{{User.name}}</span>
               </div>
               <div class="d-flex justify-content-between">
-                <span>Rating</span><span class="text-secondary">{{recipe.rating}}</span>
+                <span>Rating: </span><span class="text-secondary">{{recipe.ratings}}</span>
               </div>
               <div class="d-flex justify-content-between">
-                <span>Created on</span><span class="text-secondary">{{format_date date_created}}</span>
+                <span>Created on:</span><span class="text-secondary">{{format_date date_created}}</span>
               </div>
             </div>
           </div>
