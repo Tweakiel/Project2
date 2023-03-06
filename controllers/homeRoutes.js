@@ -1,6 +1,10 @@
 //rendering homepage
 const router = require("express").Router();
-const { Recipe, Category, User } = require("../models");
+const {
+  Recipe,
+  Category,
+  User
+} = require("../models");
 
 const withAuth = require("../utils/auth");
 
@@ -11,8 +15,7 @@ router.get("/", async (req, res) => {
       where: {
         id: [1, 2, 3],
       },
-      include: [
-        {
+      include: [{
           model: User,
           attributes: ["name"],
         },
@@ -24,7 +27,9 @@ router.get("/", async (req, res) => {
     });
 
     res.render("homepage", {
-      recipes: presetRecipes.map((recipe) => recipe.get({ plain: true })),
+      recipes: presetRecipes.map((recipe) => recipe.get({
+        plain: true
+      })),
     });
   } catch (err) {
     res.status(500).json(err);
@@ -46,15 +51,15 @@ router.get("/recipes", async (req, res) => {
 router.get("/recipes/:id", async (req, res) => {
   try {
     const recipeData = await Recipe.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ["name"],
-        },
-      ],
+      include: [{
+        model: User,
+        attributes: ["name"],
+      }, ],
     });
 
-    const recipe = recipeData.get({ plain: true });
+    const recipe = recipeData.get({
+      plain: true
+    });
 
     console.log(recipe);
     res.render("specificrecipe", {
@@ -71,19 +76,47 @@ router.get("/recipes/:id", async (req, res) => {
   }
 });
 
+// Use withAuth middleware to prevent access to route
+router.get('/profile', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: {
+        exclude: ['password']
+      },
+      include: [{
+        model: Project
+      }],
+    });
+
+    const user = userData.get({
+      plain: true
+    });
+
+    res.render('profile', {
+      ...user,
+      logged_in: true
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.get("/category", async (req, res) => {
   try {
     const categories = await Category.findAll({
       include: Recipe,
     });
-    res.render("category", { categories: categories.map((c) => c.toJSON()) });
+    res.render("category", {
+      categories: categories.map((c) => c.toJSON())
+    });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ message: "Server error" });
+    res.status(500).json({
+      message: "Server error"
+    });
   }
 });
-
-// Get recipes that share category_id
 
 router.get("/category/:id", async (req, res) => {
   try {
@@ -94,6 +127,7 @@ router.get("/category/:id", async (req, res) => {
 
     console.log(category);
     res.render("recipeuc", { category });
+
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });
