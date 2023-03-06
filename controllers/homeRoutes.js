@@ -5,11 +5,30 @@ const { Recipe, Category, User } = require("../models");
 const withAuth = require("../utils/auth");
 
 // Define a GET route for the homepage
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
+  try {
+    const presetRecipes = await Recipe.findAll({
+      where: {
+        id: [1, 2, 3],
+      },
+      include: [
+        {
+          model: User,
+          attributes: ["name"],
+        },
+        {
+          model: Category,
+          attributes: ["name"],
+        },
+      ],
+    });
 
-
-  res.render("homepage");
-  
+    res.render("homepage", {
+      recipes: presetRecipes.map((recipe) => recipe.get({ plain: true })),
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 // Get all recipes
@@ -37,9 +56,7 @@ router.get("/recipes/:id", async (req, res) => {
 
     const recipe = recipeData.get({ plain: true });
 
-    recipe.description = JSON.parse(Recipe.description);
-    recipe.ingredients = JSON.parse(Recipe.ingredients);
-
+    console.log(recipe);
     res.render("specificrecipe", {
       ...recipe,
     });
@@ -49,17 +66,20 @@ router.get("/recipes/:id", async (req, res) => {
     //   res.status(200).json(recipe);
     // }
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
 
 router.get("/category", async (req, res) => {
-  console.log("GET/RECIPES");
   try {
-    const category = await Category.findAll();
-    res.status(200).json(category);
+    const categories = await Category.findAll({
+
+    });
+    res.render("category", { categories });
   } catch (err) {
-    res.status(500).json(err);
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
   }
 });
 
