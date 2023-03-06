@@ -36,17 +36,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Get all recipes
-router.get("/recipes", async (req, res) => {
-  console.log("GET/RECIPES");
-  try {
-    const recipes = await Recipe.findAll();
-    res.status(200).json(recipes);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
 // Get a single recipe by id
 router.get("/recipes/:id", async (req, res) => {
   try {
@@ -66,12 +55,8 @@ router.get("/recipes/:id", async (req, res) => {
     console.log(recipe);
     res.render("specificrecipe", {
       ...recipe,
+      logged_in: req.session.logged_in,
     });
-    // if (!recipe) {
-    //   res.status(404).json({ message: "Recipe not found" });
-    // } else {
-    //   res.status(200).json(recipe);
-    // }
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -113,6 +98,7 @@ router.get("/category", async (req, res) => {
     });
     res.render("category", {
       categories: categories.map((c) => c.toJSON()),
+      logged_in: req.session.logged_in,
     });
   } catch (err) {
     console.error(err);
@@ -124,13 +110,22 @@ router.get("/category", async (req, res) => {
 
 router.get("/category/:id", async (req, res) => {
   try {
-    const category = await Category.findOne({
-      where: { id: req.params.id },
-      include: [{ model: Recipe }], // include the Recipe model
+    console.log("req.params.id", req.params.id);
+    const category = await Category.findByPk(req.params.id);
+    console.log(category);
+    const recipes = await Recipe.findAll({
+      include: [{ model: User }],
+      where: { category_id: category.id || null },
     });
 
-    console.log(category);
-    res.render("recipeuc", { category });
+    //
+    console.log(recipes);
+
+    res.render("recipeuc", {
+      category,
+      recipes,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });
