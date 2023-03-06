@@ -1,14 +1,22 @@
 [
     {
         "name": "Breakfast",
-        "ImageName":"breakfast"
+        "description": "Wake up to a delicious start with our breakfast recipes. From sweet to savory, we've got you covered with quick and easy options to fuel your day."
     },
     {
         "name": "Lunch",
-        "ImageName":"lunch"
+        "description": "Refuel midday with our lunch recipes. Whether you're looking for a light salad or a hearty sandwich, we have a variety of options to satisfy your hunger and keep you going."
     },
     {
         "name": "Dinner",
-        "ImageName":"dinner"
-    }   
+        "description": "End your day on a high note with our dinner recipes. From comforting classics to exciting new dishes, we have something for everyone to enjoy."
+    }, 
+    {
+        "name": "Dietary Restrictions",
+        "description": " Eating healthy has never been easier with our dietary restriction recipes. Whether you're gluten-free, dairy-free, or vegetarian, we have options that will fit your needs."
+    },
+    {
+        "name": "International Dishes",
+        "description": "Take your taste buds on a global adventure with our international dishes. From Italian pasta to Asian stir-fry, we have a variety of recipes to explore different cuisines from around the world."
+    }
 ]

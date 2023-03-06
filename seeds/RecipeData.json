@@ -41,5 +41,46 @@
             "Bake in the preheated oven until no longer pink at the bone and juices run clear, about 30 minutes. An instant-read thermometer inserted into thickest part of thigh, near the bone, should read 165 degrees F (74 degrees C)."],
             "user_id":"1",
             "category_id":"3"
+    },
+    {
+        "name": "Stuffed Sweet Potato with Hummus Dressing",
+        "description": "Hearty yet simple to prepare, this stuffed sweet potato with black beans, kale and hummus dressing is a fantastic 5-ingredient lunch for one",
+        "ingredients": [
+            "1 large sweet potato, scrubbed",
+         "3/4 cup chopped kale", 
+         "1 cup canned black beans, rinsed",
+        "1/4 cup hummus",
+        "2 tablespoons water"],
+         "instructions":[
+            "Prick sweet potato all over with a fork. Microwave on High until cooked through, 7 to 10 minutes.", 
+            "Meanwhile, wash kale and drain, allowing water to cling to the leaves. Place in a medium saucepan; cover and cook over medium-high heat, stirring once or twice, until wilted.",
+            "Add beans; add a tablespoon or two of water if the pot is dry. Continue cooking, uncovered, stirring occasionally, until the mixture is steaming hot, 1 to 2 minutes.",
+            "Split the sweet potato open and top with the kale and bean mixture. Combine hummus and 2 tablespoons water in a small dish. Add additional water as needed to reach desired consistency. Drizzle the hummus dressing over the stuffed sweet potato."],
+            "user_id":"3",
+            "category_id":"4"
+    },
+    {
+        "name": "Bistek Tagalog (beefsteak) ",
+        "description": "Beef slices cooked in soy sauce with lemon and onions. This is bistek tagalog. ",
+        "ingredients": [
+            "1 1/2 lbs beef sirloin thinly sliced",
+         "5 tablespoons soy sauce", 
+         "4 pieces calamansi or 1-piece lemon",
+        "3 cloves garlic minced",
+        "3 pieces yellow onion sliced into rings",
+        "4 tablespoons cooking oil",
+        "1 cup water",
+        "1 pinch salt"],
+         "instructions":[
+            "Marinate beef in soy sauce, lemon (or calamansi), and ground black pepper for at least 1 hour. Note: marinate overnight for best result", 
+            "Heat the cooking oil in a pan then pan-fry half of the onions until the texture becomes soft. Set aside.",
+            "Drain the marinade from the beef. Set it aside. Pan-fry the beef on the same pan where the onions were fried for 1 minute per side. Remove from the pan. Set aside",
+            "Add more oil if needed. Saute garlic and remaining raw onions until onion softens.",
+            "Pour the remaining marinade and water. Bring to a boil.",
+            "Add beef. Cover the pan and simmer until meat is tender. Note: Add water as needed.",
+            "Season with ground black pepper and salt as needed. Top with pan-fried onions.",
+            "Transfer to a serving plate. Serve hot. Share and Enjoy!"],
+            "user_id":"3",
+            "category_id":"5"
     }
 ]
