@@ -1,4 +1,4 @@
-<h1>Recipes Under {{category.dataValues.categoryName}}</h1>
+<h1>Recipes Under {{category.categoryName}}</h1>
 {{#if recipes.length}}
   {{#each recipes}}
     <div style="background-color: #eee;">
@@ -7,24 +7,24 @@
           <div class="col-md-8 col-lg-6 col-xl-4">
             <div class="card text-black">
             <i class="fab fa-apple fa-lg pt-3 pb-1 px-3"></i>
-              <a href="/recipes/{{dataValues.id}}">
-                <img src='/images/recipes/{{dataValues.name}}.jpg' class="card-img-top" alt="Recipe Image" />
+              <a href="/recipes/{{id}}">
+                <img src='/images/recipes/{{name}}.jpg' class="card-img-top" alt="Recipe Image" />
               </a>
             <div class="card-body">
             <div class="text-center">
               <h5>
-                <a href="/recipes/{{dataValues.id}}">{{dataValues.name}}</a>
+                <a href="/recipes/{{id}}">{{name}}</a>
               </h5>
             </div>
             <div>
               <div class="d-flex justify-content-between">
-                <span>Recipe owner</span><span class="text-secondary">User{{User.name}}</span>
+                <span>Recipe owner</span><span class="text-secondary">{{this.user.name}}</span>
               </div>
               <div class="d-flex justify-content-between">
                 
               </div>
               <div class="d-flex justify-content-between">
-                <span>{{dataValues.description}}</span>
+                <span>{{description}}</span>
               </div>
               <div class="d-flex justify-content-between">
                 
