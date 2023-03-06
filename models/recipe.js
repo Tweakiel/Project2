@@ -58,11 +58,11 @@ Recipe.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    ratings: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0,
-    },
+    // ratings: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   defaultValue: 0,
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
