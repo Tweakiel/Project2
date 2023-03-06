@@ -3,21 +3,30 @@ const newFormHandler = async (event) => {
 
   const name = document.querySelector(".recipe-name-hb").value.trim();
   const image = document.querySelector(".recipe-img-hb").value.trim();
-  const category = document.querySelector(".category-input").value.trim();
+  const category_id = parseInt(
+    document.querySelector(".category-input").value.trim()
+  );
   const description = document.querySelector(".recipe-des-hb").value.trim();
-  const instruction = document.querySelector(".recipe-ins-hb").value.trim();
-  const ingredient = document.querySelector(".recipe-ing-hb").value.trim();
+  const instructions = document.querySelector(".recipe-ins-hb").value.trim();
+  const ingredients = document.querySelector(".recipe-ing-hb").value.trim();
 
-  if (name && image && category && description && instruction && ingredient) {
+  if (
+    name &&
+    image &&
+    category_id &&
+    description &&
+    instructions &&
+    ingredients
+  ) {
     const response = await fetch(`/api/recipes`, {
       method: "POST",
       body: JSON.stringify({
         name,
         image,
-        category,
+        category_id,
         description,
-        instruction,
-        ingredient,
+        instructions,
+        ingredients,
       }),
       headers: {
         "Content-Type": "application/json",
@@ -52,6 +61,6 @@ document
   .querySelector(".new-project-form")
   .addEventListener("submit", newFormHandler);
 
-document
-  .querySelector(".project-list")
-  .addEventListener("click", delButtonHandler);
+// document
+//   .querySelector(".project-list")
+//   .addEventListener("click", delButtonHandler);

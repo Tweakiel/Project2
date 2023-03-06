@@ -23,6 +23,13 @@ router.get("/", async (req, res) => {
       ],
     });
 
+    console.log(
+      presetRecipes.map((recipe) =>
+        recipe.get({
+          plain: true,
+        })
+      )
+    );
     res.render("homepage", {
       recipes: presetRecipes.map((recipe) =>
         recipe.get({
@@ -111,13 +118,23 @@ router.get("/category", async (req, res) => {
 router.get("/category/:id", async (req, res) => {
   try {
     console.log("req.params.id", req.params.id);
-    const category = await Category.findByPk(req.params.id);
+    const categoryData = await Category.findByPk(req.params.id);
+
+    const category = categoryData.get({
+      plain: true,
+    });
     console.log(category);
-    const recipes = await Recipe.findAll({
+
+    const recipeData = await Recipe.findAll({
       include: [{ model: User }],
       where: { category_id: category.id || null },
     });
 
+    const recipes = recipeData.map((recipe) =>
+      recipe.get({
+        plain: true,
+      })
+    );
     //
     console.log(recipes);
 
