@@ -93,7 +93,7 @@ router.get("/category/:id", async (req, res) => {
     });
 
     console.log(category);
-    res.render("recipeUnder", { category });
+    res.render("recipeuc", { category });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });
