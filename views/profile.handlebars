@@ -1,0 +1,137 @@
+<style>
+  .divider:after,
+  .divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+  }
+
+  .h-custom {
+    height: calc(100% - 73px);
+  }
+
+  @media (max-width: 450px) {
+    .h-custom {
+      height: 100%;
+    }
+  }
+</style>
+
+
+
+<section class="vh-100">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-title">Welcome, {{name}}!</h3>
+
+      <div class="p-5 text-center bg-light">
+        <h3 class="mb-3">Add Recipe</h3>
+      </div>
+
+      <div class="d-flex justify-content-between" id="userProfile">
+        <div class="container-fluid h-custom">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                class="img-fluid" alt="Sample image" />
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+              <form class="new-project-form">
+                {{! <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                  <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                </div> }}
+
+                <div class="divider d-flex align-items-center my-4">
+                  <p class="text-center fw-bold mx-3 mb-0">Ajoutons votre recette</p>
+                </div>
+
+                <!-- Recipe input -->
+                <div class="form-outline mb-4">
+                  <input type="text" id="typeText" class="form-control recipe-name-hb" />
+                  <label class="form-label" for="typeText">Recipe Name</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="text" id="typeText" class="form-control recipe-img-hb" />
+                  <label class="form-label" for="typeText">URL only link of recipe
+                    image</label>
+                </div>
+                <div class="dropdown">
+                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2"
+                    data-mdb-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                    <li><button class="dropdown-item" type="button">Category 1</button></li>
+                    <li><button class="dropdown-item" type="button">Category 2</button></li>
+                    <li><button class="dropdown-item" type="button">Category 3</button></li>
+                    <li><button class="dropdown-item" type="button">Category 4</button></li>
+                    <li><button class="dropdown-item" type="button">Category 5</button></li>
+                  </ul>
+                </div>
+                <div class="form-outline">
+                  <textarea class="form-control recipe-des-hb" id="textAreaExample" rows="4"></textarea>
+                  <label class="form-label" for="textAreaExample">Recipe
+                    descriptions</label>
+                </div>
+                <div class="form-outline">
+                  <textarea class="form-control recipe-ins-hb" id="textAreaExample" rows="4"></textarea>
+                  <label class="form-label" for="textAreaExample">Recipe
+                    instructions</label>
+                </div>
+                <div class="form-outline">
+                  <textarea class="form-control recipe-ing-hb" id="textAreaExample" rows="4"></textarea>
+                  <label class="form-label" for="textAreaExample">Recipe ingredients</label>
+                </div>
+                <div class="text-center text-lg-start mt-4 pt-2">
+                  <button type="button" class="btn btn-primary btn-lg">
+                    Create
+                  </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        {{#if recipes.length}}
+        <div class="col-md-6 project-list">
+          <h3>Current Recipes:</h3>
+
+          {{#each recipes as |recipe|}}
+          <div class="row mb-2">
+            <div class="col-md-8">
+              <h4><a href="/project/{{recipes.id}}">{{recipes.name}}</a></h4>
+            </div>
+            <div class="col-md-4">
+              <button class="btn btn-sm btn-danger" data-id="{{recipes.id}}">DELETE</button>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+        {{/if}}
+      </div>
+
+      <div
+        class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+        <!-- Copyright -->
+        <div class="text-white mb-3 mb-md-0">
+          Copyright © 2020. All rights reserved.
+        </div>
+        <!-- Copyright -->
+
+        <!-- Right -->
+        <div>
+          <a href="https://www.linkedin.com/in/fuaad-shobambi/" class="text-white" alt="Fuaad's Linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#!" class="text-white" alt="Zeke's Linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#!" class="text-white" alt="Julian's Linkedin">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </div>
+    </div>
+  </div>
+</section>
