@@ -5,14 +5,17 @@ const router = require("express").Router();
 
 console.log("RecipeRoutes file was called!");
 
-
 // Create a new recipe
-router.post("/", async (req, res) => {
+router.post("/", withAuth, async (req, res) => {
   try {
-    const recipe = await Recipe.create(req.body);
-    res.status(201).json(recipe);
+    const newRecipe = await Recipe.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
+
+    res.status(200).json(newRecipe);
   } catch (err) {
-    res.status(500).json(err);
+    res.status(400).json(err);
   }
 });
 
