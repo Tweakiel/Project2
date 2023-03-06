@@ -1,38 +1,40 @@
 <style>
-    .divider:after,
-    .divider:before {
-        content: "";
-        flex: 1;
-        height: 1px;
-        background: #eee;
-    }
-    .h-custom {
-        height: calc(100% - 73px);
-    }
-    @media (max-width: 450px) {
-        .h-custom {
-            height: 100%;
-        }
-    }
+  .divider:after, .divider:before { content: ""; flex: 1; height: 1px;
+  background: #eee; } .h-custom { height: calc(100% - 73px); } @media
+  (max-width: 450px) { .h-custom { height: 100%; } }
 </style>
 
 <section class="vh-100">
   <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src="../public/images/3794962_9207.jpg"
-          class="img-fluid" alt="cooking pot image">
+        <img
+          src="../public/images/3794962_9207.jpg"
+          class="img-fluid"
+          alt="cooking pot image"
+        />
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
         <div class="card text-center">
-        <h5 class="card-header">{{name}}</h5>
-        <h6 class="card-header">{{user.name}}</h6>
-        <div class="card-body">
+          <h5 class="card-header">{{name}}</h5>
+          <h6 class="card-header">{{user.name}}</h6>
+          <div class="card-body">
             <h5 class="card-title">{{category_id}}</h5>
             <p class="card-text">{{description}}</p>
-            <p class="card-text">{{instructions}}</p>
-            <p class="card-text">{{ingredients}}</p>
-        </div>
+
+            <ul>
+              {{#each ingredients}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ul>
+
+            <ol>
+              {{#each instructions}}
+                <li>{{this}}</li>
+              {{/each}}
+            </ol>
+
+          </div>
         </div>
       </div>
     </div>
