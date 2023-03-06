@@ -83,41 +83,20 @@ router.get("/category", async (req, res) => {
   }
 });
 
-// Get a single recipe by id
+// Get recipes that share category_id
+
 router.get("/category/:id", async (req, res) => {
   try {
-    const category = await Category.findByPk(req.params.id);
-    if (!category) {
-      res.status(404).json({ message: "category not found" });
-    } else {
-      res.status(200).json(category);
-    }
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+    const category = await Category.findOne({
+      where: { id: req.params.id },
+      include: [{ model: Recipe }], // include the Recipe model
+    });
 
-router.get("/users", async (req, res) => {
-  console.log("GET/RECIPES");
-  try {
-    const users = await User.findAll();
-    res.status(200).json(users);
+    console.log(category);
+    res.render("recipeUnder", { category });
   } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// Get a single recipe by id
-router.get("/users/:id", async (req, res) => {
-  try {
-    const users = await User.findByPk(req.params.id);
-    if (!users) {
-      res.status(404).json({ message: "user not found" });
-    } else {
-      res.status(200).json(users);
-    }
-  } catch (err) {
-    res.status(500).json(err);
+    console.error(err);
+    res.status(500).json({ message: "Server error" });
   }
 });
 

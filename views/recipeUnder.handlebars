@@ -1,0 +1,6 @@
+<h1>Recipes Under {{categoryName}}</h1>
+{{#with category}}
+{{#each category.recipes}}
+  {{> recipeCard recipe=this}}
+{{/each}}
+{{/with}}
