@@ -35,12 +35,10 @@
               <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
                 class="img-fluid" alt="Sample image" />
             </div>
+
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
               <form class="new-project-form">
-                {{! <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                  <p class="lead fw-normal mb-0 me-3">Sign in with</p>
-                </div> }}
-
+                
                 <div class="divider d-flex align-items-center my-4">
                   <p class="text-center fw-bold mx-3 mb-0">Let's add your recipe</p>
                 </div>
@@ -55,17 +53,16 @@
                   <label class="form-label" for="typeText">URL only link of recipe
                     image</label>
                 </div>
-               <select class="form-control" id="category">
-               {{#if categories}}
-                 <option value="">Select a category</option>
-               {{#each categories}}
-                 <option value="{{this.id}}">{{this.name}}</option>
-              {{/each}}
-               {{else}}
-                  <option value="">No categories found</option>
-                {{/if}}
-              </select>
-
+                <div class="form-group mb-4">
+                   <label for="CategoryInput">Select a category that best fits this dish</label>
+                    <select class="form-control category-input" id="CategoryInput">
+                    <option>Breakfast</option>
+                    <option>Lunch</option>
+                    <option>Dinner</option>
+                    <option>Dietary Restrictions</option>
+                    <option>International Dishes</option>
+                    </select>
+                </div>
                 <div class="form-outline">
                   <textarea class="form-control recipe-des-hb" id="textAreaExample" rows="4"></textarea>
                   <label class="form-label" for="textAreaExample">Recipe
@@ -81,7 +78,7 @@
                   <label class="form-label" for="textAreaExample">Recipe ingredients</label>
                 </div>
                 <div class="text-center text-lg-start mt-4 pt-2">
-                  <button type="button" class="btn btn-primary btn-lg">
+                  <button type="submit" class="btn btn-primary btn-lg">
                     Create
                   </button>
               </form>
