@@ -2,9 +2,10 @@
         {{!-- // make right-hero and left-hero be in flex-row --}}
        <div class="container">
       <div class="row">
+        
         <img src="images/2004.i121.037_isometric_cooking_school_blog_set-01-removebg-preview.png" class="rounded float-start" id="chef" alt="Chef TasteTroop" >
         <div class="col-md-6" id="content">
-          <h3>From TasteTroop to Tastebuds</h3>
+          <h3>FromTasteTroop to Tastebuds</h3>
           <p>Browse our extensive collection of recipes, and discover new dishes to add to your repertoire. </p>
           <a href="/" class="btn  mr-2 button">Get Started</a>
           {{#if logged_in}}
@@ -13,7 +14,8 @@
            {{/if}} 
           <a href="/login" class="btn  mr-2 button">Login</a>
         </div>
-    
+        </div>
+        
 <!-- Loop over each object in the projects array -->
  <div id="global">
   {{#each recipes as |recipe| }}
