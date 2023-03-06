@@ -132,7 +132,7 @@ body{
     background-color: #d4a373;
    }
     
-   .card:hover {
+   main .card:hover {
     transform: rotateY(10deg) translateZ(50px);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.5s, box-shadow 0.5s, ease .2s;

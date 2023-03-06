@@ -7,10 +7,6 @@
           <h3>From TasteTroop to Tastebuds</h3>
           <p>Browse our extensive collection of recipes, and discover new dishes to add to your repertoire. Click on get started to sign up and start adding your recipes</p>
           <a href="/login" class="btn  mr-2 button">Get Started</a>
-          {{#if logged_in}}
-          <a id="recipe-button" href="/category" class="btn  mr-2 button">Recipe</a>
-          <button class="btn  mr-2 button" id="logout">Logout</button>
-           {{/if}} 
         </div>
     
 <!-- Loop over each object in the projects array -->
@@ -31,7 +27,7 @@
                 <h5>
                   <a href="/recipes/{{recipe.id}}">{{recipe.name}}</a>
                 </h5>
-                <p class="text-muted mb-4">{{Category.categoryName}}</p>
+                <p class="text-muted mb-4">{{Category.name}}</p>
               </div>
               <div>
                 <div class="d-flex justify-content-between">
