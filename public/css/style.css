@@ -172,7 +172,7 @@ body{
 
     .footer {
       background-image: radial-gradient(circle at 12.84% 46.75%, #ffffb2 0, #ffffad 12.5%, #f8f5a7 25%, #e0e6a1 37.5%, #c8d59a 50%, #b2c493 62.5%, #a0b48c 75%, #91a686 87.5%, #849a81 100%);
-      position: fixed;
+      margin-top: 10em ;
       left: 0;
       bottom: 0;
       width: 100%;
