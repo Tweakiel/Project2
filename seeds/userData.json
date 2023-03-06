@@ -8,6 +8,16 @@
         "name": "admin",
         "email": "admin@admin.ca",
         "password": "admin"
+    },
+    {
+        "name": "Julian",
+        "email": "julian@gmail.com",
+        "password": "password12345"
+    },
+    {
+        "name": "Fuuad",
+        "email": "fuuad@live.ca",
+        "password": "password12345"
     }
     
 ]

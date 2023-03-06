@@ -74,9 +74,9 @@ router.get("/recipes/:id", async (req, res) => {
 router.get("/category", async (req, res) => {
   try {
     const categories = await Category.findAll({
-
+      include: Recipe,
     });
-    res.render("category", { categories });
+    res.render("category", { categories: categories.map((c) => c.toJSON()) });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });

@@ -24,7 +24,7 @@ body{
   
   .logo img:hover {
       cursor: pointer;
-      content: url("../../public/images/recipe-book-unscreen.gif");
+      content: url("/images/recipe-book-unscreen.gif");
       transition: ease-out .3s;
     }
   

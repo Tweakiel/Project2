@@ -11,13 +11,13 @@ Category.init(
       primaryKey: true,
       autoIncrement: true,
     },
+
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-
-    ImageName: {
-      type: DataTypes.STRING,
+    description: {
+      type: DataTypes.TEXT,
       allowNull: false,
     },
   },
