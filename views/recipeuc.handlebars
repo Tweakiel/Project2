@@ -1,36 +1,7 @@
-<div style="background-color: #eee;">
-  <div class="container py-5">
-    <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6 col-xl-4">
-        <div class="card text-black">
-          <i class="fab fa-apple fa-lg pt-3 pb-1 px-3"></i>
-          // we insert the image of the category through helpers
-            <a href="/recipe/{{recipe.id}}">
-                <img src={{recipe_image}} class="card-img-top" alt="Recipe Image" />
-            </a>
-          <div class="card-body">
-            <div class="text-center">
-              <h5>
-                <a href="/recipe/{{recipe.id}}">{{recipe.name}}</a>
-              </h5>
-            </div>
-            <div>
-              <div class="d-flex justify-content-between">
-                <span>Recipe owner</span><span class="text-secondary">{{user.name}}</span>
-              </div>
-              {{!-- <div class="d-flex justify-content-between">
-                {{!-- <span>Rating</span><span class="text-secondary">{{recipe.rating}} ⭐️</span>
-              </div> --}} 
-              <div class="d-flex justify-content-between">
-                <span>{{recipe.description}}</span>
-              </div>
-              <div class="d-flex justify-content-between">
-                <span>Created on</span><span class="text-secondary">{{format_date date_created}}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<h1>Recipes Under {{categoryName}}</h1>
+{{#with category}}
+{{#each category.recipes}}
+  {{> recipeCard recipe=this}}
+{{/each}}
+{{/with}}
+
