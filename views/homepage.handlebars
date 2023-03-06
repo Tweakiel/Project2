@@ -1,18 +1,17 @@
    <main>
-        // make right-hero and left-hero be in flex-row
-        <div class="right-hero">
-            <img src="../public/images/hero.jpg" alt="Chef TasteTroop">
-        </div>
-
-        <div class="left-hero">
-            <h3>From TasteTroop to Tastebuds</h3>
-            <p>Browse our extensive collection of recipes, and discover new dishes to add to your repertoire. </p>
-
-            <a href="/" class="hero-button">Get Started</a>
-            {{#if logged_in}}
-                <a id="recipe-button" href="/recipes">Recipes</a> 
-                <button class="no-button" id="logout">Logout</button>
-            {{/if}}
+        {{!-- // make right-hero and left-hero be in flex-row --}}
+       <div class="container">
+      <div class="row">
+        <img src={{".././public/images/2004.i121.037_isometric_cooking_school_blog_set-01-removebg-preview.png"}}  class="rounded float-start" id="chef" alt="Chef TasteTroop" >
+        <div class="col-md-6" id="content">
+          <h3>From TasteTroop to Tastebuds</h3>
+          <p>Browse our extensive collection of recipes, and discover new dishes to add to your repertoire. </p>
+          <a href="/" class="btn  mr-2 button">Get Started</a>
+          {{#if logged_in}}
+          <a id="recipe-button" href="/category" class="btn  mr-2 button">Recipe</a>
+          <button class="btn  mr-2 button" id="logout">Logout</button>
+           {{/if}} 
+          <a href="/login" class="btn  mr-2 button">Login</a>
         </div>
     </main>
 <!-- Loop over each object in the projects array -->
