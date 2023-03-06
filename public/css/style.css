@@ -1,0 +1,148 @@
+
+body{
+    background-image: radial-gradient(circle at 50% 12.33%, #ffffff 0, #ffffff 25%, #ffffff 50%, #f5f9f8 75%, #ebf3f1 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  }
+  
+  
+  nav{
+    background-image: radial-gradient(circle at 12.33% 50%, #ffffff 0, #ffffff 16.67%, #ffffff 33.33%, #ffffff 50%, #e7f1ee 66.67%, #d2e4dd 83.33%, #c0d8cd 100%);
+      border-bottom: solid 1px #000000;
+      
+  }
+  .nav-item{
+  align-content: end;
+  }
+  
+  .logo img{
+      width: 60px;
+      height: 60px;
+      margin-right: 1em;
+  }
+  
+  .logo img:hover {
+      cursor: pointer;
+      content: url("../../public/images/recipe-book-unscreen.gif");
+      transition: ease-out .3s;
+    }
+  
+    #chef {
+      width: 500px;
+      height: 500px;
+      margin-left: -4em;
+      margin-right: 2.75em;
+    }
+  
+    #nav-option:hover {
+      cursor: pointer;
+      box-shadow: #f7f7f7 0px 0px 10px;
+      transform: scale(1.3);
+     color: rgb(0, 111, 145);
+      /* animation: shake 0.5s;
+    animation-iteration-count: infinite; */
+    transition: ease .3s;
+    }
+    
+    
+    /* @keyframes shake {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(-5px, 0); }
+      50% { transform: translate(0, 0); }
+      75% { transform: translate(5px, 0); }
+      100% { transform: translate(0, 0); }
+    } */
+  
+  .no-button {
+      background-color: white;
+      border: 1px solid black;
+      color: black;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      opacity: .5;
+    }
+  
+    button{
+      background-color: #f7f7f7;
+    
+    }
+
+    button .login{
+        opacity: 1;
+
+    }
+  
+    .button:hover{
+      cursor: pointer;
+      box-shadow: #f7f7f7 0px 0px 10px;
+      transform: scale(1.3);
+     color: rgb(0, 111, 145);
+      /* animation: shake 0.5s;
+    animation-iteration-count: infinite; */
+    transition: ease .3s;
+    }
+    
+  
+    #global {
+      height: 300px;
+      width: 400px;
+      border: 1px solid #ddd;
+      background: none;
+      overflow-y: scroll;
+      margin-left: 30em;
+      margin-top: -18em;
+    }
+    #mensajes {
+      height: auto;
+      margin-top: 1em;
+      
+    }
+   
+    
+    
+    .user-buttons {
+      margin-left: auto;
+    }
+  
+    #content{
+      margin-top: 3em;
+    }
+    
+    .recipes{
+      margin-left: 2em;
+    }
+  
+    #options{
+      margin-right: 3em;
+    }
+  
+    #global img {
+      width: 50px;
+      height: 50px;
+      margin-right: 1em;
+      
+    }
+  
+    .text {
+      border: solid 1px black;
+      border-radius: 5px;
+      margin-top: 1em;
+      background-image:url(./assets/katie-smith-uQs1802D0CQ-unsplash.jpg) ;
+      background-size: 373px 120px;
+      background-repeat: no-repeat;
+      background: opa
+      
+    }
+  
+    .text p {
+      margin-left: 1em;
+      margin-right: 1em;
+      color: white;
+      opacity: 1;
+    }

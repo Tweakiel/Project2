@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TasteTroop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,29 +15,28 @@
 
 <body>
     <header>
-        <a href="/" class="logo">
-            TasteTroop
-        </a>
-
-        <nav>
-            <ul>
-                <li>
-                    <a href="/">Home</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+        <a href="/" class="logo"><img src="../../public/images/recipe-book.png" alt="logo"></a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        </div>  
+        <ul class="navbar-nav mal-auto" id="options"> 
+          <li class="nav-item">
+            <a class="nav-link active" id="nav-option" href="/">Home</a>
+                <li class="nav-item">
+                    <a class="nav-link active" id="nav-option"  href="/category">Category</a>
                 </li>
-                <li>
-                    <a href="/category">Category</a>
-                </li>
-
+  <div  class="user-buttons">
                 {{#if logged_in}}
-                // make this recipe-button into the same ui as no-button class
-                // the recipe class is to style the tags
+                {{!-- // make this recipe-button into the same ui as no-button class
+                // the recipe class is to style the tags --}}
                     <a class="recipe" href="/profile">Add Recipes</a>
-                    <a class="recipe" id="recipe-button" href="/category/recipe">Recipe</a> |
-                    <button class="no-button" id="logout">logout</button>
+                    <a class="btn  mr-2 button" id="recipe-button" href="/category/recipe">Recipe</a> |
+                    <button  type="button" class="btn btn-secondary btn-lg no-button" id="logout">logout</button>
                 {{else}}
-                //make this login-button into the same ui as no-button class
-                    <a class="recipe" id="login-button" href="/login">Login</a>
-                {{/if}}
+                {{!-- //make this login-button into the same ui as no-button class --}}
+                    <a class="btn  mr-2 button" id="login-button" href="/login">Login</a>
+                {{/if}}</div>
             </ul>
         </nav>
     </header>
