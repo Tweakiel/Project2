@@ -1,7 +1,7 @@
 # TasteTroop
 
 TasteTroop is a recipe-sharing website where food enthusiasts from all over the world can discover and share their favorite recipes. Users can create profiles, upload photos of their dishes, and share their recipes with the community. The website has a user-friendly interface that allows users to recipes of other users. Overall, TasteTroop is a vibrant and dynamic online community for food lovers who want to explore new tastes, share their cooking experiences, and connect with like-minded people.
-
+ 
 ## User Story
 
 ```
