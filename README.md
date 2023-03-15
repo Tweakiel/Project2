@@ -1,3 +1,4 @@
+
 # TasteTroop
 
 TasteTroop is a recipe-sharing website where food enthusiasts from all over the world can discover and share their favorite recipes. Users can create profiles, upload photos of their dishes, and share their recipes with the community. The website has a user-friendly interface that allows users to recipes of other users. Overall, TasteTroop is a vibrant and dynamic online community for food lovers who want to explore new tastes, share their cooking experiences, and connect with like-minded people.
@@ -75,6 +76,3 @@ Visit the website at https://fierce-forest-79938.herokuapp.com/, and interact wi
 ```
 TasteTroop is an exciting recipe sharer website that provides users with an easy and enjoyable way to discover and share new recipes. With a user-friendly interface, users can create accounts, submit recipes, categorize recipes. Whether you are a food enthusiast or just looking for some inspiration in the kitchen, TasteTroop is a great platform to connect with like-minded individuals and discover new recipes.
 ```
-
-
-
